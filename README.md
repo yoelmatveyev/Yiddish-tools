@@ -18,4 +18,4 @@ ibus-daemon -d --xim --cache refresh
 
 # LembergYM-Medium.ttf
 
-An old Yiddish semi-cursive font (**vaybertaytsh** or **mashket**) bases on the 1863 Lemberg edition of the book *Nakhles Tsvi*. Contains only Jewish letters.
+An old Yiddish semi-cursive font (**vaybertaytsh** or **mashket**) based on the 1863 Lemberg edition of the book *Nakhles Tsvi*. Contains only Jewish letters.
