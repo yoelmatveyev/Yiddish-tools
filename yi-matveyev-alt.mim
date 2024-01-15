@@ -1,0 +1,102 @@
+;; yi-matveyev.mim -- Yiddish input method with traditional layout
+;; Copyright (C) 2020
+;;  Yoel Matveyev
+
+;; This file is part of the m17n database; a sub-part of the m17n
+;; library.
+
+;; The m17n library is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU Lesser General Public License
+;; as published by the Free Software Foundation; either version 2.1 of
+;; the License, or (at your option) any later version.
+
+;; The m17n library is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+;; Lesser General Public License for more details.
+
+;; You should have received a copy of the GNU Lesser General Public
+;; License along with the m17n library; if not, write to the Free
+;; Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
+
+;;; Input method for Yiddish based on the traditional typewriter layout.
+;;; Unlike some other older methods, this method takes into consideration
+;;; frequency of letters and ligatures. For the sake of compatibility
+;;; with some software, standard Yiddish ligatures are provided as 
+;;; character combinations and not as single Unicode characters.
+
+(input-method yi matveyev)
+
+(description 
+ "Yiddish input method based on traditional typewriter layouts and letter frequency.")
+
+(title "ייִדיש")
+
+(map
+ (letters
+  ("`" ?;)
+  ("q" ?;)
+  ("w" ?,)
+  ("e" ?ק)
+  ("r" ?ר)
+  ("t" ?א)
+  ((S-t) "אַ")
+  ((A-t) "אָ")
+  ("y" ?ט)
+  ("u" ?ו)
+  ((S-u) "וּ")
+  ("i" ?ן)
+  ("o" ?ם)
+  ("p" "פֿ")
+  ((S-p) "פּ")
+  ((A-p) ?פ) 
+  ("a" ?ש)
+  ((S-a) "שׂ")
+  ("s" ?ד)
+  ("d" ?ג)
+  ("f" ?כ)
+  ((S-f) "כּ")
+  ("g" ?ע)
+  ("h" ?י)
+  ((S-h) "ײַ")
+  ((A-h) "יִ")
+  ("j" ?ח)
+  ("k" ?ל)
+  ("l" ?ך)
+  (";" ?ף)
+  ("z" ?ז)
+  ("x" ?ס)
+  ("c" ?ב)
+  ((S-c) "בֿ")
+  ("v" ?ה)
+  ("b" ?נ)
+  ("n" ?מ)
+  ("m" ?צ)
+  ("," ?ת)
+  ((A-,) "תּ") 
+  ("." ?ץ)
+  ("/" ?.)
+  ((A-') ?׳)
+  ((A-\") ?״)
+  ("(" ")")
+  (")" "(")
+  ("<" ">")
+  (">" "<")
+  ("[" "]")
+  ("]" "[")
+  ("{" "}")
+  ("}" "{")
+  ("-" "־")
+  ("_" "-")
+
+  ))
+
+(state
+ (init
+  (letters)))
+
+;; Local Variables:
+;; coding: utf-8
+;; mode: lisp
+;; End:
